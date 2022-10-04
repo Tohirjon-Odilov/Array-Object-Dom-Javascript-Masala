@@ -167,7 +167,8 @@ let arr = [
 
 }
 
-{/***********
+{
+  /***********
  * !OBJECT *
  ***********/
 
@@ -213,4 +214,75 @@ let arr = [
     car2.getInfo()
     console.log(car2);
   }
+}
+
+
+{
+  /****************
+ * !FUNKSIYALAR *
+ ****************/
+
+  //? 1. Function decleration
+  //? 2. Function expression
+  //? 3. Arrow function
+  //? 4. Anonim funtion
+  //? 5. IIFI immidiately invoked function expression
+  //? 6. Pure function
+  //? 7. Callback function
+
+
+
+
+
+  {
+    /**************
+   * ?ARGUMENTS *
+   **************/
+
+    //* funksiyaning argumentlarini olib beradi
+    //* ushbu property arrow function'da ishlamaydi
+    //* ushbu property bizga array like object qaytaradi.
+
+    let calc = (s1, s2) => {
+      console.log(arguments);
+    }
+    calc(2, 4)
+    //! xatolik chiqadi //ReferenceError: arguments is not defined
+
+
+
+    function cal(s1, s2, ...rest) {
+      console.log(arguments);
+    }
+    cal(2, 4, 3, 'salomlar')
+  }
+}
+
+{
+  /*************************
+   * !JAVASCRIPT RECURSION *
+   *************************/
+
+  function countDown(number) {
+    console.log(number);
+    const newNumber = number - 1
+    if (newNumber > 0) {
+      countDown(newNumber)
+    }
+  }
+  countDown(4)
+
+}
+
+{
+  /******************
+   * !FACTORIAL SON *
+   ******************/
+
+  function factorialSon(num) {
+    if (num < 0) throw new Error("Musbat son kiritdiniz?")
+    if (num === 0) return 1
+    return num * factorialSon(num - 1)
+  }
+  console.log(factorialSon(7))//* <= 1*2*3*4*5*6*7
 }

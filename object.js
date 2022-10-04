@@ -1,3 +1,86 @@
+{
+  /********************
+  * !OBJECT YARATISH *
+  ********************/
+
+
+  //* 3. Clas keyword'i orqali
+  let obj = {
+    name: 'Tohirjon',
+    surname: "Odilov",
+    age: 19,
+  }
+  let pupil = Object.create(
+    {},
+    {
+      name: {
+        writable: true,
+        configurable: true,
+        value: 'Tohirjon'
+      },
+      surname: {
+        writable: true,
+        configurable: true,
+        value: 'Tohirjon'
+      }
+    }
+  )
+  pupil.name = 'YOsh ozgardi'
+  console.log(pupil.age);
+}
+
+{
+  /*******************************
+   * !OBJECTGA PROPERTY QO'SHISH o'chirish va tahrirlash *
+   *******************************/
+
+  {
+    //! add property
+    let obj = {
+      name: 'Tohirjon',
+      surname: "Odilov",
+      age: 19,
+    }
+    console.log(obj);
+
+    //*bracket notation
+    obj['Location'] = 'Andijon' //! added 1-usul
+
+    console.log(obj);
+    delete obj.Location
+    delete obj.age
+    delete obj.surname
+
+    //*dot notation
+    obj.isStudent = true //! added 2-usul
+    console.log(obj);
+
+  }
+
+  {
+    //! delete property
+    let obj = {
+      name: 'Tohirjon',
+      location: 'Andijon'
+    }
+    console.log(obj);
+
+    obj.location = 'Toshkent' //! edited
+    console.log(obj);
+  }
+
+  {
+    let obj = {
+      name: 'Tohirjon',
+      location: 'Andijon'
+    }
+    console.log(obj);
+
+    delete obj.location //! deleted
+    console.log(obj);
+  }
+}
+
 /************************
  * !OBJECT DESTRUCTURING *
  ************************/
