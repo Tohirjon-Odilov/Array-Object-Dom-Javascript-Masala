@@ -11,22 +11,24 @@
     age: 19,
   }
   let pupil = Object.create(
-    {},
+    obj, //pupil obj'tining prototype'ga tushyapti
     {
       name: {
-        writable: true,
-        configurable: true,
+        writable: true,// o'zgartirib bo'lamydigan qilish
+        configurable: true, // o'chirib bo'lmaydigan qilish
+        enumerable: true, // buni bilmadim
         value: 'Tohirjon'
       },
       surname: {
         writable: true,
         configurable: true,
-        value: 'Tohirjon'
+        enumerable: true,
+        value: 'odilov'
       }
     }
   )
   pupil.name = 'YOsh ozgardi'
-  console.log(pupil.age);
+  console.log(pupil.age); //obj'dan meros qilib olyapti 
 }
 
 {
